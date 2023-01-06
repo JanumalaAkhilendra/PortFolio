@@ -19,6 +19,7 @@ body {
 
 section {
     padding: 5em 2em;
+    overflow: hidden;
   
 }
 
@@ -37,9 +38,11 @@ section {
 .parallex{
     position: relative;
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
 }
 
 .parallex h1{
@@ -52,10 +55,43 @@ section {
 .parallex img{
     position: absolute;
     bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
     pointer-events: none;
+    object-fit: cover;
 }
+
+.parallex #moon{
+    mix-blend-mode: screen;
+}
+
+.parallex #btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: white;
+    border-radius: 20px;
+    color: black;
+    font-size: 1.5em;
+    z-index: 0;
+    transform: translateY(130px);
+
+}
+
+.parallex #text{
+    position: absolute;
+    color: white;
+    right: -130px;
+    white-space: nowrap;
+    font-size: 3.5vw;
+    z-index: 0;
+}
+
+
 .sec{
     position: relative;
     padding: 100px;
@@ -79,6 +115,9 @@ section {
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         text-transform: uppercase;
         /* letter-spacing: 5px; */
+    }
+    .sec {
+        padding: 30px;
     }
 }
 
